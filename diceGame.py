@@ -6,7 +6,7 @@ def dice():
     dice()
 def dice1():
     roll1 =random.randint(1,6)
-    #print(roll)
+    #print(roll1)
     return roll1
     dice1()
 
@@ -15,7 +15,11 @@ player1=0
 player2=0
 
 for i in range(5):
-    score=dice()+dice()
+    dice1=dice()
+    dice2=dice()
+    print("Player1 rolled a "+ str(dice1)+ "and a "+str(dice2))
+    score=dice1+dice2
+
     if score % 2 == 0:
         score=score+10
     else:
@@ -24,8 +28,8 @@ for i in range(5):
             score=0
         else:
             score=score
-player2=score
-print(player2)
+player1=score
+print("Player1's total score for this round is "+str(score))
 
 for i in range(5):
     score1=dice1()+dice1()
